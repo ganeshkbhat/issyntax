@@ -6,8 +6,35 @@
   "exports": {
     "require": "./index.js",
     "import": "./index.mjs"
+  },"directories": {
+    "test": "test"
   },
-  "keywords": [],
+  "scripts": {
+    "test": "mocha --reporter spec --recursive --timeout 60000"
+  },
+  "keywords": [
+    "syntax",
+    "javascript environment",
+    "issyntax", 
+    "isKeyword",
+    "inbuilt functions", 
+    "inbuilt objects", 
+    "lexical", 
+    "grammer", 
+    "keywords", 
+    "javascript",
+    "environment"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "chai": "^4.4.1",
+    "mocha": "^10.2.0",
+    "pre-commit": "^1.2.2",
+    "pre-push": "^0.1.4",
+    "sinon": "^17.0.1",
+    "typescript": "^5.3.3",
+    "unimported": "^1.31.1"
+  },
   "author": "Ganesh B <ganeshsurfs@gmail.com>",
   "license": "MIT"
 }
