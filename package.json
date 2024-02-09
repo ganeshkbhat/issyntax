@@ -9,6 +9,14 @@
   },"directories": {
     "test": "test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganeshkbhat/issyntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ganeshkbhat/issyntax/issues"
+  },
+  "homepage": "https://github.com/ganeshkbhat/issyntax#readme",
   "scripts": {
     "test": "mocha --reporter spec --recursive --timeout 60000"
   },
