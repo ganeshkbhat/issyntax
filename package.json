@@ -12,7 +12,7 @@
   },
   "pre-commit": {
     "run": [
-      "unimported"
+      "test"
     ]
   },
   "pre-push": {
