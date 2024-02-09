@@ -23,10 +23,22 @@ function testInbuiltFunction(g, k) {
   return false;
 }
 
+/**
+ *
+ *
+ * @param {*} g the global object to work with based on environment. Ex: global, globalThis, window
+ * @param {*} k the keyword to check
+ * @return {*} 
+ */
+module.exports.isInbuiltObjectOrFunction = function isInbuiltObjectOrFunction(g, k) {
+  let v = testInbuiltFunction(g, k);
+  return { keyword: keyword, isReserved: v };
+}
+
 module.exports.isKeyword = function isKeyword(keyword) {
   try {
-    let exceptions = ["let", "yield", "NaN", "float", "RegEx", "undefined", 
-    "async", "await", "module", "exports", "throws"];
+    let exceptions = ["let", "yield", "NaN", "float", "RegEx", "undefined",
+      "async", "await", "module", "exports", "throws"];
     if (exceptions.includes(keyword)) return { keyword: keyword, isReserved: true };
     if (!!globalThis) {
       if (testInbuiltFunction(globalThis, keyword)) throw new Error("Inbuilt function or already define global function");
