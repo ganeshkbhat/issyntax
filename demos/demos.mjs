@@ -15,7 +15,7 @@
 
 'use strict';
 
-const { isKeyword } = require("../index.js");
+import { isKeyword } from "../index.js";
 
 console.log("isKeyword('let');", isKeyword("let"));
 console.log("isKeyword('const');", isKeyword("const"));
