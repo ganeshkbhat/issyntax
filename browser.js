@@ -43,11 +43,11 @@ module.exports.isKeyword = function isKeyword(keyword) {
       "async", "await", "module", "exports", "throws"];
     if (exceptions.includes(keyword)) return { keyword: keyword, isReserved: true };
     if (!!globalThis) {
-      if (testInbuiltFunction(globalThis, keyword)) throw new Error("Inbuilt function or already define global function");
+      if (testInbuiltFunction(globalThis, keyword)) throw new Error("Inbuilt function\/ object defined globally");
     } else if (!!global) {
-      if (testInbuiltFunction(global, keyword)) throw new Error("Inbuilt function or already define global function");
+      if (testInbuiltFunction(global, keyword)) throw new Error("Inbuilt function\/ object defined globally");
     } else if (!!window) {
-      if (testInbuiltFunction(window, keyword)) throw new Error("Inbuilt function or already define global window function");
+      if (testInbuiltFunction(window, keyword)) throw new Error("Inbuilt function\/ object defined globally window");
     }
     new Function("var " + keyword + ";");
     return { keyword: keyword, isReserved: false };

@@ -1,6 +1,6 @@
 {
   "name": "issyntax",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "check if a item is a syntax in the javascript environment using issyntax using the isKeyword function. checks for most inbuilt functions, objects, and lexical grammer keywords in javascript environment",
   "main": "index.js",
   "exports": {
@@ -22,6 +22,14 @@
     "test": "mocha --reporter spec --recursive --timeout 60000",
     "browserify": "browserify index.js > browser.js",
     "uglify": "uglifyjs --compress --mangle reserved=['$','require','exports'] browser.js -o browser.min.js"
+  },
+  "unpkg": "browser.min.js",
+  "pre-commit": {
+    "run": [
+      "test",
+      "browserify",
+      "uglify"
+    ]
   },
   "keywords": [
     "syntax",
