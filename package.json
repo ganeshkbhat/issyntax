@@ -26,9 +26,9 @@
   },
   "pre-commit": {
     "run": [
-      "test",
       "browserify",
-      "uglify"
+      "uglify",
+      "test"
     ]
   },
   "keywords": [
