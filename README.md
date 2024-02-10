@@ -1,6 +1,7 @@
 # issyntax
 check if a item is a syntax in the javascript environment using issyntax using the isKeyword function. Checks for most inbuilt functions and lexical grammer keywords in javascript environment
 
+Demos can be found in the folder [demos](https://github.com/ganeshkbhat/issyntax/tree/main/demos)
 
 #### USAGE: isKeyword
 

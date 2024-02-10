@@ -4,8 +4,8 @@
  * Author: Ganesh B
  * Description: 
  * Install: npm i  --save
- * Github: https://github.com/ganeshkbhat/
- * npmjs Link: https://www.npmjs.com/package/
+ * Github: https://github.com/ganeshkbhat/issyntax
+ * npmjs Link: https://www.npmjs.com/package/issyntax
  * File: 
  * File Description: 
  * 

@@ -6,7 +6,8 @@
   "exports": {
     "require": "./index.js",
     "import": "./index.mjs"
-  },"directories": {
+  },
+  "directories": {
     "test": "test"
   },
   "repository": {
@@ -18,29 +19,42 @@
   },
   "homepage": "https://github.com/ganeshkbhat/issyntax#readme",
   "scripts": {
-    "test": "mocha --reporter spec --recursive --timeout 60000"
+    "test": "mocha --reporter spec --recursive --timeout 60000",
+    "browserify": "browserify index.js > browser.js",
+    "uglify": "uglifyjs --compress --mangle reserved=['$','require','exports'] browser.js -o browser.min.js"
   },
   "keywords": [
     "syntax",
     "javascript environment",
-    "issyntax", 
+    "issyntax",
     "isKeyword",
-    "inbuilt functions", 
-    "inbuilt objects", 
-    "lexical", 
-    "grammer", 
-    "keywords", 
+    "is js keyword",
+    "is js syntax",
+    "inbuilt functions",
+    "inbuilt objects",
+    "lexical",
+    "grammer",
+    "lexical grammer",
+    "keywords",
     "javascript",
-    "environment"
+    "environment",
+    "is keyword reserved in javascript js nodejs",
+    "is syntax reserver in javascript js nodejs",
+    "is keyword builtin object function keyword in js nodejs javascript",
+    "is keyword reserved lexical grammer in javascript js nodejs",
+    "is syntax reserved lexical grammer in javascript js nodejs",
+    "is keyword builtin object function lexical grammer in js nodejs javascript"
   ],
   "devDependencies": {
     "@types/node": "^20.11.16",
+    "browserify": "^17.0.0",
     "chai": "^4.4.1",
     "mocha": "^10.2.0",
     "pre-commit": "^1.2.2",
     "pre-push": "^0.1.4",
     "sinon": "^17.0.1",
     "typescript": "^5.3.3",
+    "uglify-js": "^3.17.4",
     "unimported": "^1.31.1"
   },
   "author": "Ganesh B <ganeshsurfs@gmail.com>",
