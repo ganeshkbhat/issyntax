@@ -1,7 +1,7 @@
 {
   "name": "issyntax",
   "version": "1.1.0",
-  "description": "check if a item is a syntax in the javascript environment using issyntax using the isKeyword function. checks for most inbuilt functions, objects, and lexical grammer keywords in javascript environment",
+  "description": "check and validate if a item is a syntax in the javascript environment using issyntax using the isKeyword function. Checks and validates for most inbuilt functions and lexical grammer keywords in javascript environment. You can also use isLanguageSyntax to check for java, js, js.browser, rust syntaxes without validation.",
   "main": "index.js",
   "exports": {
     "require": "./index.js",
