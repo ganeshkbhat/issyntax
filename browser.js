@@ -320,9 +320,9 @@ function isSyntax(env = "node" /* node, browser */) {
  * @param {string} [env="node"]
  * @return {*} 
  */
-function isLanguageSyntax(key, language = "js.node", env = "node") {
+function isLanguageSyntax(key, language = "js.node") {
   let l = require(path.join("lang." + language + ".json"));
-  return isLanguageKeyword(key, l, env);
+  return isLanguageKeyword(key, l);
 }
 module.exports.isLanguageSyntax = isLanguageSyntax;
 
@@ -334,7 +334,7 @@ module.exports.isLanguageSyntax = isLanguageSyntax;
  * @param {string} [env="node"]
  * @return {*} 
  */
-function isLanguageKeyword(key, keywordArray, env = "node") {
+function isLanguageKeyword(key, keywordArray) {
   return keywordArray.includes(key);
 }
 module.exports.isLanguageKeyword = isLanguageKeyword;

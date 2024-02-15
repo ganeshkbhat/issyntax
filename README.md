@@ -46,11 +46,12 @@ console.log("isSyntax('var');", isSyntax("var"));
 -->
 
 
-#### USAGE: isLanguageKeyword [TODO]
+#### USAGE: isLanguageKeyword, isLanguageSyntax [TODO]
 
 ```
-const { isLanguageKeyword } = require("issyntax");
-console.log("isLanguageKeyword('Arrays', 'js.node');", isLanguageKeyword('Arrays', 'js.node'));
+const { isLanguageKeyword, isLanguageSyntax } = require("issyntax");
+console.log("isLanguageKeyword('Arrays', 'js.node');", isLanguageKeyword('Arrays', ['list', 'of', 'all', 'keywords', 'in', 'that', 'language']));
+console.log("isLanguageSyntax('Arrays', 'js.node');", isLanguageSyntax('Arrays', 'js.node'));
 ```
 
 
