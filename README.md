@@ -1,7 +1,10 @@
 # issyntax
-check if a item is a syntax in the javascript environment using issyntax using the isKeyword function. Checks for most inbuilt functions and lexical grammer keywords in javascript environment
+check and validate if a item is a syntax in the javascript environment using issyntax using the `isKeyword` function. Checks and validates for most `inbuilt functions and lexical grammer keywords` in javascript environment.
+
+Alternatively, you can use `isLanguageKeyword` to check for `java`, `js`, `js.browser`, `rust` syntaxes using predefined list of keywords. However, `presence of keywords for a specific version will not be validated for other languages` as javascript. 
 
 Demos can be found in the folder [demos](https://github.com/ganeshkbhat/issyntax/tree/main/demos)
+
 
 #### USAGE: isKeyword
 
@@ -31,7 +34,7 @@ console.log("isInbuiltObjectOrFunction(globalThis, 'Strings');", isInbuiltObject
 console.log("isInbuiltObjectOrFunction(window, 'Buffers');", isInbuiltObjectOrFunction("Buffers"));
 ```
 <!-- 
-#### USAGE: isSyntax
+#### USAGE: isSyntax [TODO]
 
 ```
 const { isSyntax } = require("issyntax");
@@ -39,8 +42,16 @@ const { isSyntax } = require("issyntax");
 console.log("isSyntax('let');", isSyntax("let"));
 console.log("isSyntax('const');", isSyntax("const"));
 console.log("isSyntax('var');", isSyntax("var"));
-``` 
+```  
 -->
+
+
+#### USAGE: isLanguageKeyword [TODO]
+
+```
+const { isLanguageKeyword } = require("issyntax");
+console.log("isLanguageKeyword('Arrays', 'js.node');", isLanguageKeyword('Arrays', 'js.node'));
+```
 
 
 #### REFERENCES
