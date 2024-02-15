@@ -22,12 +22,14 @@
   "scripts": {
     "test": "mocha --reporter spec --recursive --timeout 60000",
     "browserify": "browserify index.js > browser.js",
-    "uglify": "uglifyjs --compress --mangle reserved=['$','require','exports'] browser.js -o browser.min.js"
+    "uglify": "uglifyjs --compress --mangle reserved=['$','require','exports'] browser.js -o browser.min.js",
+    "gitadd": "git add ."
   },
   "pre-commit": {
     "run": [
       "browserify",
       "uglify",
+      "gitadd",
       "test"
     ]
   },
