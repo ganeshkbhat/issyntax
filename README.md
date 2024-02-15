@@ -50,7 +50,7 @@ console.log("isSyntax('var');", isSyntax("var"));
 
 ```
 const { isLanguageKeyword, isLanguageSyntax } = require("issyntax");
-console.log("isLanguageKeyword('Arrays', 'js.node');", isLanguageKeyword('Arrays', ['list', 'of', 'all', 'keywords', 'in', 'that', 'language']));
+console.log("isLanguageKeyword('Arrays', ['list', 'of', 'all', 'keywords', 'in', 'that', 'language']);", isLanguageKeyword('Arrays', ['list', 'of', 'all', 'keywords', 'in', 'that', 'language']));
 console.log("isLanguageSyntax('Arrays', 'js.node');", isLanguageSyntax('Arrays', 'js.node'));
 ```
 
