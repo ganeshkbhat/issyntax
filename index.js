@@ -15,6 +15,8 @@
 
 'use strict';
 
+const path = require("path");
+
 function testInbuiltFunction(g, k) {
   if (!!g[k]) {
     if (g[k] instanceof Function) { g[k](); }
@@ -191,6 +193,12 @@ XMLDocument
 
  */
 
+/**
+ *
+ *
+ * @param {string} [env="node"]
+ * @return {*} 
+ */
 function isSyntax(env = "node" /* node, browser */) {
   let browserspecific = [
     "alert", "all", "anchor", "anchors",
@@ -301,5 +309,32 @@ function isSyntax(env = "node" /* node, browser */) {
     }
   });
 }
+
+/**
+ *
+ *
+ * @param {*} key
+ * @param {string} [language="js"]
+ * @param {string} [env="node"]
+ * @return {*} 
+ */
+function isLanguageSyntax(key, language = "js", env = "node") {
+  let l = require(path.join(language + ".json"));
+  return isLanguageKeyword(key, l, env);
+}
+module.exports.isLanguageSyntax = isLanguageSyntax;
+
+/**
+ *
+ *
+ * @param {*} key
+ * @param {*} keywordArray
+ * @param {string} [env="node"]
+ * @return {*} 
+ */
+function isLanguageKeyword(key, keywordArray, env = "node") {
+  return keywordArray.includes(key);
+}
+module.exports.isLanguageKeyword = isLanguageKeyword;
 
 // module.exports.isSyntax = isSyntax;
