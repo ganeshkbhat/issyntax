@@ -1,9 +1,9 @@
 /**
  * 
- * Package: 
+ * Package: issyntax
  * Author: Ganesh B
  * Description: 
- * Install: npm i  --save
+ * Install: npm i issyntax --save
  * Github: https://github.com/ganeshkbhat/issyntax
  * npmjs Link: https://www.npmjs.com/package/issyntax
  * File: 
@@ -223,7 +223,6 @@ function isBrowser() {
   if (typeof window === "object") { return "browser"; }
 }
 
-
 if (isBrowser() === "node") {
   module.exports.isLanguageKeyword = isLanguageKeyword;
   module.exports.isLanguageSyntax = isLanguageSyntax;
@@ -231,7 +230,6 @@ if (isBrowser() === "node") {
   module.exports.isInbuiltObjectOrFunction = isInbuiltObjectOrFunction;
   // module.exports.isSyntax = isSyntax;
 }
-
 
 
 /**
