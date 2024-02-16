@@ -195,9 +195,9 @@ function isSyntax(env = "node" /* node, browser */) {
  * @param {string} [env="node"]
  * @return {*} 
  */
-function isLanguageSyntax(key, language = "js.node") {
-  let l = require(path.join("lang." + language + ".json"));
-  return isLanguageKeyword(key, l);
+function isLanguageSyntax(key, language = "js.node", jsonObject) {
+  jsonObject = (isBrowser() === "node") ? require(path.join("lang." + language + ".json")) : (!!jsonObject) ? jsonObject : null;
+  return isLanguageKeyword(key, jsonObject);
 }
 
 /**
