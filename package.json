@@ -7,7 +7,7 @@
     "require": "./index.js",
     "import": "./index.mjs"
   },
-  "unpkg": "browser.min.js",
+  "unpkg": "index.min.js",
   "directories": {
     "test": "test"
   },
