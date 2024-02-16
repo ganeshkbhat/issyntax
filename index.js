@@ -15,8 +15,6 @@
 
 'use strict';
 
-const path = require("path");
-
 /**
  *
  *
@@ -196,6 +194,7 @@ function isSyntax(env = "node" /* node, browser */) {
  * @return {*} 
  */
 function isLanguageSyntax(key, language = "js.node", jsonObject) {
+  const path = require("path");
   jsonObject = (isBrowser() === "node") ? require(path.join("lang." + language + ".json")) : (!!jsonObject) ? jsonObject : null;
   return isLanguageKeyword(key, jsonObject);
 }
