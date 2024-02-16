@@ -27,9 +27,6 @@
   },
   "pre-commit": {
     "run": [
-      "browserify",
-      "uglify",
-      "gitadd",
       "test"
     ]
   },
